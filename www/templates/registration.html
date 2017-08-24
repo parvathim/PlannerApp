@@ -1,0 +1,84 @@
+<ion-nav-view>
+<ion-view title="Sign Up" class="padding commonBG">
+  
+<ion-content class="padding commonBG" style="box-shadow: none">	
+
+  <div class="" style="margin-left: 10%; margin-bottom: 0px; width: 80%;">
+      <img src="img/logo.jpg" style="margin-top: 10px; margin-left: 30%; width: 40%;"></img>
+  </div>
+  <div class="item commonBG" style="text-align: center; color: #888; border: none;">New User Registration</div>
+
+      <div style="color: #FF0000" ng-show="error.message">
+        <i class="icon ion-alert"></i>
+        {{error.message}}
+      </div>
+      <!-- <div class="item item-body"> -->
+      <div class="" style="height: 30%;">
+
+        <form name="loginForm" ng-submit="signUp(loginForm)" novalidate="novalidate">
+        <div class="form-group">
+          <label class="item item-input">
+            <input type="text" placeholder="Name" ng-model="user.name" name="name" required="required" class="form-control" style="margin-left: 4px;"/>
+          </label>
+        </div>
+        <div class="item-spacing"></div>
+
+        <div class="form-group">
+          <label class="item item-input">
+            <input type="text" placeholder="Phone Number" ng-model="user.phone" name="phone" required="required" class="form-control" style="margin-left: 4px;" />
+          </label>
+        </div>
+        <div class="item-spacing"></div>
+
+        <div class="form-group">
+          <label class="item item-input">
+            <input type="email" placeholder="Email" ng-model="user.email" name="email" required="required" class="form-control" style="margin-left: 4px;"/>
+          </label>
+        </div>
+        <div class="item-spacing"></div>
+
+        <div class="form-group">
+          <label class="item item-input">
+            <input type="password" placeholder="Password (Min 8 char, 1 Uppercase, 1 Num)" ng-model="user.password" name="password" required="required" class="form-control" style="margin-left: 4px;"/>
+          </label>
+        </div>
+
+        <div class="item-spacing"></div>
+
+        <div class="form-group">
+          <label class="item item-input">
+            <input type="text" placeholder="Address" ng-model="user.address" name="address" class="form-control" style="margin-left: 4px;"/>
+          </label>
+        </div>
+        <div class="item-spacing"></div>
+
+        <div class="form-group">
+          <label class="item item-input">
+            <input type="text" placeholder="City" ng-model="user.city" name="city" class="form-control" style="margin-left: 4px;"/>
+          </label>
+        </div>
+        <div class="item-spacing"></div>
+
+        <div class="form-group">
+          <label class="item item-input">
+            <input type="text" placeholder="Country" ng-model="user.country" name="country" class="form-control" style="margin-left: 4px;"/>
+          </label>
+        </div>
+        <div class="item-spacing"></div>
+
+        <div class="form-group">
+          <button type="submit" class="button button-block button-positive-plan">
+            <b>SIGN UP</b>
+          </button>
+        </div>
+        <br><div style="margin-bottom: 40px;"></div>
+
+
+        </form>
+
+      </div>
+
+</ion-content>
+
+</ion-view>
+</ion-nav-view>

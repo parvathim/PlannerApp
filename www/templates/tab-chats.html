@@ -1,0 +1,47 @@
+<ion-view view-title="PERSONAL PLANNER">
+  <ion-content>
+
+<!--    <ion-list>-->
+<!--      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+<!--        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>-->
+	<div class="row"> 
+	    <!--<div align="left" class="col col-33">
+	      <button class="button button-positive-plan" ng-click="prev()"><i class="icon ion-ios-arrow-back icon-accessory"></i></button>
+	    </div>--->
+	    <div align="center" class="col col-33" style="margin:auto; width: 50%; font-size:24px; color:#39679B;"> <!--<span class="fa fa-calendar">{{sdate}}</span>-->
+		<input type="date" id="datetimepicker" name="ddate" id="ddate" style="font-size:24px; color:#39679B;height:50px;width:200px" ng-change="getPlan()" ng-model="$parent.sdate"/>
+	   </div>
+	    <!--<div align="right" class="col col-33">
+	      <button class="button button-positive-plan" ng-click="next()"><i class="icon ion-ios-arrow-forward icon-accessory"></i></button>
+	    </div>-->
+	</div>
+
+	<div id="anchorFeeds">
+
+        <div class="list card" ng-repeat="chat in chats" href="#/tab/chats/">
+
+          <a class="item item-custom1 item-text-wrap" ng-click="showPeopleProfile(feed.createdBy._id)">
+            <div class="col col-75 item-primary-text">{{chat.p_date}}</div>
+            <!--<span class="item-idicators item-note">{{feed.postTime}}</span>-->
+            <div class="item-secondary-text">{{chat.f_time}} to {{chat.t_time}}</div>
+          </a>
+
+          <div class="button button-block button-light" ng-show="chat.summary" style="margin-left: 15px; margin-right: 15px; color: #666;"
+            ng-click="showPatientDetails()">{{chat.summary}}</div>
+
+        <div class="item item-body">
+          <p>{{chat.description}}</p>
+        </div>
+
+<!--	<i class="icon ion-chevron-right icon-accessory"></i>
+	
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>-->
+      </ion-item>
+<!--    </ion-list>-->
+  </ion-content>
+</ion-view>

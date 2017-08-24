@@ -1,0 +1,18 @@
+<ion-view view-title="PERSONAL PLANNER">
+  <ion-content class="padding">
+    <div class="row"> 
+    <div align="left" class="col col-33">
+      <button class="button button-dark-plan" ng-click="cancelNew()">CANCEL</button>
+    </div>
+    <div align="center" class="col col-33" style="margin:auto; width: 50%; font-size:24px; color:#39679B;">NEW PLAN</div>
+    <div align="right" class="col col-33">
+      <button class="button button-positive-plan" ng-click="createPlan()">SAVE</button>
+    </div>
+    </div>
+
+    <h3>Date: <input type="date" id="datep" ng-model="plan.date" style="display: block"></input> </h3>
+    <h3>Time:</h3><h4> From <input type="time" id="timef" ng-model="plan.ftime"></input> to <input type="time" id="ttime" ng-model="plan.ttime"></input></h4>
+    <h3>Summary:</h3><input type="text" id="summ" ng-model="plan.summary"></input>
+    <h3>Description:</h3><textarea rows=10 ng-model="plan.description"></textarea>
+  </ion-content>
+</ion-view>

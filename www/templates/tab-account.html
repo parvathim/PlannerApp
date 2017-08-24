@@ -1,0 +1,30 @@
+<ion-view view-title="PERSONAL PLANNER">
+  <ion-content>
+    <!--<ion-list>-->	
+    <!--<ion-toggle  ng-model="settings.enableFriends">
+        Enable Friends
+    </ion-toggle>-->
+    <div class="row"> 
+    <div align="left" class="col col-33">
+      <button class="button button-positive-plan" ng-click="editProfile()">EDIT</button>
+    </div>
+    <div align="center" class="col col-33" style="margin:auto; width: 50%; font-size:24px; color:#39679B;">CONTACT INFO</div>
+    <div align="right" class="col col-33">
+      <button class="button button-positive-plan" ng-click="logout()">SIGN-OUT</button>
+    </div>
+    </div>
+  <div class="list">
+
+        <div class="list card">
+
+              <div class="item item-profile-data commonHighlight">Name:<span class="item-note">{{user.name}}</span></div>
+              <div class="item item-profile-data commonHighlight">Phone:<span class="item-note">{{user.phone}}</span></div>
+              <div class="item item-profile-data commonHighlight">Address:<span class="item-note">{{user.address}}</span></div>
+              <div class="item item-profile-data commonHighlight">City:<span class="item-note">{{user.city}}</span></div>
+              <div class="item item-profile-data commonHighlight">Country:<span class="item-note">{{user.country}}</span></div>
+
+        </div>
+     </div>
+    <!--</ion-list>-->
+  </ion-content>
+</ion-view>
